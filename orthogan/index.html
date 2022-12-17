@@ -1,6 +1,19 @@
 <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
 <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
+
+<script>
+    MathJax = {
+        chtml: {
+            scale: 0.8
+        }
+    };
+</script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
 <style type="text/css">
     body {
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -136,13 +149,14 @@
 </head>
 
 <body>
-    <br>
+<br>
     <center>
         <span style="font-size:36px">OrthoGAN: Multifaceted Semantics<br>
             for Disentangled Face Editing</span>
         <table align=center width=600px>
             <table align=center width=600px>
                 <tr>
+                    <br>
                     <td align=center width=100px>
                         <center>
                             <span style="font-size:24px"><a href="https://github.com/chennaveh">Chen Naveh</a></span>
@@ -155,6 +169,12 @@
                     </td>
                 </tr>
             </table>
+        </table>
+        <br>
+        <span style="font-size:22px">Department of Computer Science, Reichman University, Israel</span>
+        <br>
+        <br>
+        </table>
             <table align=center width=320px>
                 <tr>
                     <td align=center width=120px>
@@ -170,6 +190,9 @@
                 </tr>
             </table>
         </table>
+
+
+
     </center>
 
     <center>
@@ -190,7 +213,7 @@
         <center><h1>Abstract</h1></center>
         <tr>
             <td>
-                This paper describes a new technique for finding disentangled semantic directions in the latent space of StyleGAN. OrthoGAN identifies meaningful orthogonal subspaces that allow editing of one human face attribute, while minimizing undesired changes in other attributes. Our model is capable of editing a single attribute in multiple directions. Resulting in a range of possible generated images. We compare our scheme with three state-of-the-art models and show that our method outperforms them in terms of face editing and disentanglement capabilities. Additionally, we suggest quantitative measures for evaluating attribute separation and disentanglement, and exhibit the superiority of our model with respect to those measures.
+                This paper describes a new technique for finding disentangled semantic directions in the latent space of StyleGAN. <b>OrthoGAN</b> identifies meaningful orthogonal subspaces that allow editing of one human face attribute, while minimizing undesired changes in other attributes. Our model is capable of editing a single attribute in multiple directions. Resulting in a range of possible generated images. We compare our scheme with three state-of-the-art models and show that our method outperforms them in terms of face editing and disentanglement capabilities. Additionally, we suggest quantitative measures for evaluating attribute separation and disentanglement, and exhibit the superiority of our model with respect to those measures.
             </td>
         </tr>
     </table>
@@ -198,6 +221,28 @@
 
     <hr>
 
+    <table align=center width=850px>
+        <center><h1>Method</h1></center>
+        <tr>
+            <td>
+                <b>OrthoGAN</b> uses pre-trained attribute classifiers to learn a decomposition of \(\mathcal{W}^+\) latent space into
+                multiple orthogonal subspaces \(\left \{ S_i \right \}_{i=0}^N\), each of which is associated with a single attribute.
+                Thereby, \(\mathcal{W}^+\) is the direct sum of  \(S_i\).
+
+        <table>
+            <center>
+                <img class="round" style="width:300px" src="./data/orthsubspaces.jpg"/>
+            </center>
+        </table>
+            <center>
+            Each vector \(\mathbf{w}\) can be uniquely expressed by the sum of its supspace projections.
+            </center>
+            </td>
+        </tr>
+
+    </table>
+    <br>
+    <hr>
     <table align=center width=850px>
         <center><h1>Multifaceted Edits</h1></center>
         <tr>
@@ -257,7 +302,7 @@
         <tr>
         <center><h1>BibTeX</h1></center>
             <left>
-                <pre><code>
+                <pre style="background-color:lightgray;"><code>
             @article{naveh2022orthogan,
                 title={OrthoGAN: Multifaceted Semantics for Disentangled Face Editing},
                 author={Naveh, Chen and Hel-Or, Yacov},
@@ -269,6 +314,7 @@
         </left>
         </tr>
     </table>
+
     <br>
 
     <hr>
