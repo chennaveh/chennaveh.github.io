@@ -131,7 +131,7 @@
 
 <html>
 <head>
-    <title>OrthoGAN</title>
+    <title>MDSE</title>
     <meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
     <meta property="og:title" content="Creative and Descriptive Paper Title." />
     <meta property="og:description" content="Paper description." />
@@ -151,8 +151,7 @@
 <body>
 <br>
     <center>
-        <span style="font-size:36px">OrthoGAN: Multifaceted Semantics<br>
-            for Disentangled Face Editing</span>
+        <span style="font-size:36px">Multi-Directional Subspace Editing in Style-Space</span>
         <table align=center width=600px>
             <table align=center width=600px>
                 <tr>
@@ -184,7 +183,7 @@
                     </td>
                     <td align=center width=120px>
                         <center>
-                            <span style="font-size:24px"><a href='https://github.com/chennaveh/orthogan'>[Code]</a></span><br>
+                            <span style="font-size:24px"><a href='https://github.com/chennaveh/MDSE'>[Code]</a></span><br>
                         </center>
                     </td>
                 </tr>
@@ -213,7 +212,7 @@
         <center><h1>Abstract</h1></center>
         <tr>
             <td>
-                This paper describes a new technique for finding disentangled semantic directions in the latent space of StyleGAN. <b>OrthoGAN</b> identifies meaningful orthogonal subspaces that allow editing of one human face attribute, while minimizing undesired changes in other attributes. Our model is capable of editing a single attribute in multiple directions. Resulting in a range of possible generated images. We compare our scheme with three state-of-the-art models and show that our method outperforms them in terms of face editing and disentanglement capabilities. Additionally, we suggest quantitative measures for evaluating attribute separation and disentanglement, and exhibit the superiority of our model with respect to those measures.
+                This paper describes a new technique for finding disentangled semantic directions in the latent space of StyleGAN. Our method identifies meaningful orthogonal subspaces that allow editing of one human face attribute, while minimizing undesired changes in other attributes. Our model is capable of editing a single attribute in multiple directions, resulting in a range of possible generated images. We compare our scheme with three state-of-the-art models and show that our method outperforms them in terms of face editing and disentanglement capabilities. Additionally, we suggest quantitative measures for evaluating attribute separation and disentanglement, and exhibit the superiority of our model with respect to those measures.
             </td>
         </tr>
     </table>
@@ -225,7 +224,7 @@
         <center><h1>Method</h1></center>
         <tr>
             <td>
-                <b>OrthoGAN</b> uses pre-trained attribute classifiers to learn a decomposition of \(\mathcal{W}^+\) latent space into
+                We use pre-trained attribute classifiers to learn a decomposition of \(\mathcal{W}^+\) latent space into
                 multiple orthogonal subspaces \(\left \{ S_i \right \}_{i=0}^N\), each of which is associated with a single attribute.
                 Thereby, \(\mathcal{W}^+\) is the direct sum of  \(S_i\).
 
@@ -244,14 +243,10 @@
     <br>
     <hr>
     <table align=center width=850px>
-        <center><h1>Multifaceted Edits</h1></center>
+        <center><h1>Multi-directional Edits</h1></center>
         <tr>
             <td>
-
-                Multifaceted editing refers to changing a
-                latent vector within a subpsace in multiple directions. This
-                allows for a variety of generated images with a modification
-                in the related attribute and minimum change in others.
+                Multi-directional editing refers to changing a latent vector within a subspace in different directions. This allows to generate a diverse variety of images that differ in a specific attribute.
             </td>
         </tr>
 
